@@ -1,0 +1,343 @@
+/* ================================
+   ESTILOS GENERALES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eaedf3;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+header {
+    background: linear-gradient(135deg, #6c63ff, #8e7dff);
+    color: white;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: rgb(56, 61, 210);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4b407e;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   PORTADA / HERO
+================================ */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background:
+        linear-gradient(
+            rgba(108, 99, 255, 0.88),
+            rgba(142, 125, 255, 0.88)
+        );
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 75px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ffe66d;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* BOTÓN */
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: #ffe66d;
+    color: #303030;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================================
+   SECCIONES
+================================ */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #5146c7;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #687078;
+}
+
+/* ================================
+   TARJETAS
+================================ */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-top: 5px solid #6c63ff;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #5146c7;
+    margin-bottom: 10px;
+}
+
+/* ================================
+   PREVENCIÓN
+================================ */
+
+.prevencion {
+    background: #eef0ff;
+}
+
+.prevencion .card {
+    border-top-color: #ff6584;
+}
+
+.prevencion .card h3 {
+    color: #e84d6c;
+}
+
+/* ================================
+   INFORMACIÓN DESTACADA
+================================ */
+
+.info-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border-left: 7px solid #6c63ff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.info-box strong {
+    color: #5146c7;
+}
+
+/* ================================
+   FRASE PRINCIPAL
+================================ */
+
+.frase {
+    text-align: center;
+    background: linear-gradient(135deg, #ff6584, #ff8fa3);
+    color: white;
+}
+
+.frase h2 {
+    font-size: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.frase p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #20243a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer .nombre {
+    color: #ffe66d;
+    font-weight: bold;
+}
+
+/* ================================
+   ANIMACIONES
+================================ */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: aparecer 1s ease;
+}
+
+/* ================================
+   RESPONSIVE - CELULAR
+================================ */
+
+@media (max-width: 700px) }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .frase h2 {
+        font-size: 30px;
+    }
+
+h1 {
+    font-size: 55px;
+    font-weight: 800;
+    text-align: center;
+
+    background: linear-gradient(90deg, #6c63ff, #ff6584);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 5px 15px rgba(108, 99, 255, 0.15);
+    margin-bottom: 25px;
+}
+h2 {
+    font-size: 38px;
+    font-weight: 800;
+    text-align: center;
+    color: #5146c7;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 30px 0;
+
+    text-shadow: 
+        3px 3px 0px #ff6584,
+        6px 6px 0px rgba(81, 70, 199, 0.15);
+
+    transition: 0.3s;
+}
+
+h2:hover {
+    transform: scale(1.05);
+    letter-spacing: 5px;
+}
